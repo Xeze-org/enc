@@ -191,3 +191,8 @@ cargo build --release      # -> target/release/enc(.exe)
 
 Pure Rust, no system dependencies. Crates: `aes-gcm`, `scrypt`, `sha2`, `tar`,
 `hex`, `getrandom`.
+
+**You don't need Rust to *run* `enc`** — the released binaries are self-contained
+native programs (Rust is only used to build them, once, in CI). The Linux
+binaries are built **static (musl)**, so they run on any distro — Alpine,
+Ubuntu, or a minimal/`scratch` container — with no glibc required.
